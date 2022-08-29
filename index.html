@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Paytm: Secure & Fast UPI Payments, Recharge Mobile & Pay Bills
+    </title>
+    <!-- * Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/8c44950f49.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- * Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- * Tailwind Configure -->
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: '480px',
+            md: '767px',
+            lg: '1080px',
+            xl: '1260px',
+            '2xl': '1440px',
+          },
+          extend: {
+            colors: {
+              white: '#ffffff',
+              black: '#000000',
+              bodyColor: '#f5f7fa',
+              paytmBlue: '#00baf2',
+              boxBlue: '#66d6ff',
+              darkBlue: '#0f4a8a',
+              btnColor: '#002970',
+              aliceBlue: '#f0fbff',
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- *favicon -->
+    <link rel="shortcut icon" href="./img/hero-icon.png" type="image/x-icon" />
+  </head>
+
+  <body class="bg-bodyColor">
+    <!-- /Header -->
+    <header class="bg-white drop-shadow-lg">
+      <!-- . Navbar -->
+      <nav class="py-4 flex justify-between items-center">
+        <!-- *logo -->
+        <div>
+          <img src="./img/nav-logo.png" alt="" class="w-48 ml-16" />
+        </div>
+
+        <!-- * Nav Menu -->
+        <div class="hidden xl:flex">
+          <a href="#" class="text-lg font-semibold mx-6">Paytm for Consumer</a>
+          <a href="#" class="text-lg font-semibold mx-6">Paytm For Business</a>
+          <a href="#" class="text-lg font-semibold mx-6"> Company</a>
+          <a href="#" class="text-lg font-semibold mx-6">Investor Relations</a>
+          <a href="#" class="text-lg font-semibold mx-6">Career</a>
+        </div>
+
+        <!-- * Login Button -->
+        <div
+          class="mr-10 bg-paytmBlue p-0.5 pl-4 rounded-full flex justify-center items-center"
+        >
+          <span class="mr-2 text-base font-semibold text-white">Sign In</span>
+          <img src="./img/admin-logo.svg" alt="" />
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
