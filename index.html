@@ -7,6 +7,14 @@
     <title>
       Paytm: Secure & Fast UPI Payments, Recharge Mobile & Pay Bills
     </title>
+
+    <!-- *Googel Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- * Font Awesome -->
     <script
       src="https://kit.fontawesome.com/8c44950f49.js"
@@ -19,12 +27,16 @@
     <script>
       tailwind.config = {
         theme: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
           screens: {
-            sm: '480px',
-            md: '767px',
+            sm: '481px',
+            md: '768px',
             lg: '1080px',
             xl: '1260px',
             '2xl': '1440px',
+            '3xl': '1920px',
           },
           extend: {
             colors: {
@@ -36,6 +48,7 @@
               darkBlue: '#0f4a8a',
               btnColor: '#002970',
               aliceBlue: '#f0fbff',
+              hoverLightColor: '#00afe3',
             },
           },
         },
@@ -46,14 +59,14 @@
     <link rel="shortcut icon" href="./img/hero-icon.png" type="image/x-icon" />
   </head>
 
-  <body class="bg-bodyColor">
+  <body class="bg-bodyColor font-inter">
     <!-- /Header -->
     <header class="bg-white drop-shadow-lg">
       <!-- . Navbar -->
       <nav class="py-4 flex justify-between items-center">
         <!-- *logo -->
         <div>
-          <img src="./img/nav-logo.png" alt="" class="w-48 ml-16" />
+          <img src="./img/nav-logo.png" alt="" class="w-32 xl:w-48 xl:ml-16" />
         </div>
 
         <!-- * Nav Menu -->
@@ -67,12 +80,373 @@
 
         <!-- * Login Button -->
         <div
-          class="mr-10 bg-paytmBlue p-0.5 pl-4 rounded-full flex justify-center items-center"
+          class="bg-paytmBlue rounded-full flex justify-center items-center cursor-pointer mr-2 pl-2 p-0.5 xl:mr-10 lg:pl-4"
         >
-          <span class="mr-2 text-base font-semibold text-white">Sign In</span>
-          <img src="./img/admin-logo.svg" alt="" />
+          <span class="mr-2 font-semibold text-white text-sm lg:text-base"
+            >Sign In</span
+          >
+          <img src="./img/admin-logo.svg" alt="" class="w-[25px] lg:w-[35px]" />
         </div>
       </nav>
     </header>
+    <!-- /header end -->
+
+    <!-- /Kyc text -->
+    <div class="text-center py-3 px-2">
+      <p>
+        <span class="font-semibold">No Wallet KYC Required</span>
+        <span class="text-2xl">😊</span>
+        to pay using UPI on Paytm.
+        <span class="font-semibold cursor-pointer"> Learn more. </span>
+      </p>
+    </div>
+    <!-- /kyc text ends -->
+
+    <!-- /Hero section -->
+    <section class="hero bg-white">
+      <div
+        class="hero-wrapper 3xl:container mx-auto flex flex-col-reverse py-10 pl-2 md:flex-row md:pl-12 md:py-10 md:justify-between md:items-center 2xl:pl-28"
+      >
+        <!-- .left hero section -->
+        <div class="hero-content pr-2 md:w-[50%] 2xl:w-[60%]">
+          <img
+            src="./img/hero-icon.png"
+            alt=""
+            class="w-[50px] mb-3 sm:mb-8 md:w-[60px] sm:mb-5"
+          />
+          <h1
+            class="text-3xl font-bold mb-3 sm:text-4xl sm:mb-5 md:w-[70%] lg:text-[54px] lg:leading-[60px] lg:mb-7 lg:w-[80%] 2xl:w-[70%]"
+          >
+            India's Most-loved Payments App
+          </h1>
+          <p
+            class="hero text-base font-semibold mb-6 sm:mb-7 lg:text-xl lg:mb-14 lg:w-[90%]"
+          >
+            Recharge & pay bills, book flights & movie tickets, open a savings
+            account, invest in stocks & mutual funds, and do a lot more.
+          </p>
+          <a
+            href="#"
+            class="hero-btn bg-black text-white rounded-full border-solid border-2 border-transparent hover:bg-white hover:text-black hover:border-black p-3 px-5"
+            >Download Paytm App
+            <i class="fa-brands fa-apple mx-2"></i>
+            <i class="fa-brands fa-google-play"></i>
+          </a>
+        </div>
+        <!-- .right hero section -->
+        <div class="hero-img mb-10 md:w-[50%]">
+          <img
+            src="./img/hero-img.png"
+            alt=""
+            class="w-[100%] sm:w-[90%] md:w-[80%] lg:w-[85%] ml-auto"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- /Hero section Ends -->
+
+    <!-- /Recharge and Pay Bill -->
+    <section class="paybill bg-paytmBlue">
+      <div class="bill-wrapper 3xl:container mx-auto py-14 px-px lg:px-24">
+        <h4
+          class="text-2xl text-white font-bold mb-10 text-center lg:text-left lg:text-4xl"
+        >
+          Recharge & Pay Bills on Paytm.
+        </h4>
+        <!-- .recharge box container -->
+        <div
+          class="recharge-container flex flex-col items-center text-center sm:flex-row sm:flex-wrap sm:justify-center sm:gap-8 lg:flex-nowrap lg:gap-5"
+        >
+          <!-- *recharge 1 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/recharge-1.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p class="text-white font-bold pb-5 md:text-base lg:pb-0">
+              Recharge <br />
+              <span class="font-bold">
+                Prepaid <br />
+                Mobile <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </p>
+          </div>
+
+          <!-- *recharge 2 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/recharge-2.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p
+              class="text-white font-bold pb-5 md:text-base lg:text-left lg:pb-0"
+            >
+              Pay <br />
+              <span class="font-bold">
+                Rent <br />
+                Payment <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </p>
+          </div>
+
+          <!-- *recharge 3 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/recharge-3.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p
+              class="text-white font-bold pb-5 md:text-base lg:text-left lg:pb-0"
+            >
+              Pay <br />
+              <span class="font-bold">
+                Electricity <br />
+                bill <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </p>
+          </div>
+
+          <!-- *recharge 4 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/recharge-4.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p
+              class="text-white font-bold pb-5 md:text-base lg:text-left lg:pb-0"
+            >
+              Recharge <br />
+              <span class="font-bold">
+                DTH <br />
+                Connection <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </p>
+          </div>
+
+          <!-- *recharge 5 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/recharge-5.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p
+              class="text-white font-bold pb-5 md:text-base lg:text-left lg:pb-0"
+            >
+              Book <br />
+              <span class="font-bold">
+                Gas <br />
+                Cylinder <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </p>
+          </div>
+
+          <!-- *recharge 6 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/recharge-6.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p
+              class="text-white font-bold pb-5 md:text-base lg:text-left lg:pb-0"
+            >
+              Pay <br />
+              <span class="font-bold">
+                Credit <br />
+                Card Bill <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </p>
+          </div>
+
+          <!-- *recharge 7 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/recharge-7.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p
+              class="text-white font-bold pb-5 md:text-base lg:text-left lg:pb-0"
+            >
+              All <br />
+              Payment <br />
+              Services <i class="fa-solid fa-angle-right"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / Recharge and Pay Bill End -->
+
+    <!-- / Book and Buy on Paytm -->
+    <section class="buypaytm bg-darkBlue">
+      <div class="bill-wrapper 3xl:container mx-auto py-14 px-px lg:px-24">
+        <h4
+          class="text-2xl text-white font-bold mb-10 text-center lg:text-left lg:text-4xl"
+        >
+          Book & Buy on Paytm.
+        </h4>
+        <!-- .recharge box container -->
+        <div
+          class="recharge-container flex flex-col items-center text-center sm:flex-row sm:flex-wrap sm:justify-center sm:gap-8 lg:flex-nowrap lg:gap-5"
+        >
+          <!-- *recharge 1 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/buy-1.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p class="text-white font-bold pb-5 md:text-base lg:pb-0">
+              Recharge <br />
+              <span class="font-bold">
+                Prepaid <br />
+                Mobile <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </p>
+          </div>
+
+          <!-- *recharge 2 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/buy-2.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p
+              class="text-white font-bold pb-5 md:text-base lg:text-left lg:pb-0"
+            >
+              Pay <br />
+              <span class="font-bold">
+                Rent <br />
+                Payment <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </p>
+          </div>
+
+          <!-- *recharge 3 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/buy-3.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p
+              class="text-white font-bold pb-5 md:text-base lg:text-left lg:pb-0"
+            >
+              Pay <br />
+              <span class="font-bold">
+                Electricity <br />
+                bill <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </p>
+          </div>
+
+          <!-- *recharge 4 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/buy-4.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p
+              class="text-white font-bold pb-5 md:text-base lg:text-left lg:pb-0"
+            >
+              Recharge <br />
+              <span class="font-bold">
+                DTH <br />
+                Connection <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </p>
+          </div>
+
+          <!-- *recharge 5 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/buy-5.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p
+              class="text-white font-bold pb-5 md:text-base lg:text-left lg:pb-0"
+            >
+              Book <br />
+              <span class="font-bold">
+                Gas <br />
+                Cylinder <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </p>
+          </div>
+
+          <!-- *recharge 6 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/buy-6.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p
+              class="text-white font-bold pb-5 md:text-base lg:text-left lg:pb-0"
+            >
+              Pay <br />
+              <span class="font-bold">
+                Credit <br />
+                Card Bill <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </p>
+          </div>
+
+          <!-- *recharge 7 -->
+          <div
+            class="recharge-1 bg-hoverLightColor rounded-lg mb-6 p-5 w-[48%] py-8 sm:mb-0 sm:w-[40%] md:w-[20%] md:text-left md:pt-6 md:py-6 lg:w-[40%] lg:self-stretch xl:bg-transparent xl:hover:bg-hoverLightColor transition duration-200 ease-in cursor-pointer"
+          >
+            <img
+              src="./img/buy-7.png"
+              alt=""
+              class="w-[60px] mx-auto mb-3 md:mx-0"
+            />
+            <p
+              class="text-white font-bold pb-5 md:text-base lg:text-left lg:pb-0"
+            >
+              All <br />
+              Payment <br />
+              Services <i class="fa-solid fa-angle-right"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Recharge and Pay Bill End -->
   </body>
 </html>
