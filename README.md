@@ -24,4 +24,4 @@ I'm `Ammar Azam Khan`. This is the Paytm Clone assignment in my `Full Stack Java
 
 ## ⌛ Time taken to finish the project
 
-- Approximately `17 hours`.
+- Approximately `17 hours`
